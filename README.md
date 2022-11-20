@@ -1,7 +1,10 @@
 # Better MarkUs
-Chrome extension to improve MarkUs UI
+> Browser extension that improves MarkUs UI
 
-Compatible with: 
+## Features
+- highlights where you lost marks on 
+
+## Compatibility 
 - Google Chrome
 - Microsoft Edge
 - Opera
