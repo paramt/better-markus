@@ -37,8 +37,6 @@ function highlight() {
 
             if (numerator != denominator) {
                 child.style.backgroundColor = RED;
-                console.log(numerator + "/" + denominator);
-                console.log(text);
             }
         }
     }
