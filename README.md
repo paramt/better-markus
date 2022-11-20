@@ -1,4 +1,4 @@
-# Better MarkUs
+# Better MarkUs <img src=images/icon-48.png align=left>
 > Browser extension that improves MarkUs UI
 
 ## Features
