@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "Better MarkUs",
+    "description": "Improve MarkUs UI",
+    "version": "1.0",
+
+    "content_scripts": [
+        {
+          "js": ["content.js"],
+          "matches": ["https://markus.student.cs.uwaterloo.ca/*"]
+        }
+    ]
+      
+  }
