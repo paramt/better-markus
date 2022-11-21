@@ -33,7 +33,10 @@ function highlight() {
             if(text.indexOf(":") < text.indexOf("/")){
                 numerator = text.slice(text.indexOf(":") + 1, text.indexOf("/"));
                 denominator = text.slice(text.indexOf("/") + 1);
-            } 
+            } else if(!isNaN(text.charAt(text.indexOf("/") + 5))){
+                numerator = text.slice(text.indexOf("/") - 5, text.indexOf("/"))
+                denominator = text.slice(text.indexOf("/") + 1, text.indexOf("/") + 6);
+            }
 
             if (numerator != denominator) {
                 child.style.backgroundColor = RED;
