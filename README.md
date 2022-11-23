@@ -6,7 +6,7 @@
 ## Features
 - highlights where you lost marks 
 
-![example](images/example-2.jpg)
+![example gif](images/demo.gif)
 
 ## Compatibility 
 - Google Chrome
