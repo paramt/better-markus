@@ -10,11 +10,17 @@
       "128": "images/icon-128.png"
     },
 
+
     "content_scripts": [
         {
           "js": ["content.js"],
           "matches": ["https://markus.student.cs.uwaterloo.ca/*"]
         }
-    ]
+    ],
+	
+	"web_accessible_resources": [{
+		"resources": ["widgets/markbox.html"],
+		"matches": ["https://markus.student.cs.uwaterloo.ca/*"]
+	}]
       
-  }
+}
