@@ -31,7 +31,12 @@ function highlight() {
 			let denominator = parseFloat(text.split('/')[1].match(/\d+\.\d+/)[0]);
 
             if (numerator != denominator) {
-				child.style.backgroundColor = RED;
+				if (numerator == 0) {
+					child.style.backgroundColor = RED;
+				}
+				else {
+					child.style.backgroundColor = "#FFA07A";
+				}
             }
         }
     }
