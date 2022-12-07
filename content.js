@@ -26,17 +26,9 @@ function highlight() {
         // skip header lines
         if(text.includes("earned/marks") || text.includes("span")) continue;
 
-        if(text.includes("/")) {
-            let numerator = text.slice(text.indexOf("/") - 4, text.indexOf("/"))
-            let denominator = text.slice(text.indexOf("/") + 1, text.indexOf("/") + 5);
-
-            if(text.indexOf(":") < text.indexOf("/")){
-                numerator = text.slice(text.indexOf(":") + 1, text.indexOf("/"));
-                denominator = text.slice(text.indexOf("/") + 1);
-            } else if(!isNaN(text.charAt(text.indexOf("/") + 5))){
-                numerator = text.slice(text.indexOf("/") - 5, text.indexOf("/"))
-                denominator = text.slice(text.indexOf("/") + 1, text.indexOf("/") + 6);
-            }
+        if (/ *\d+\.\d+ *\/ *\d+\.\d+/.test(text)) {
+            let numerator = parseFloat(text.split('/')[0].trim());
+			let denominator = parseFloat(text.split('/')[1].match(/\d+\.\d+/)[0]);
 
             if (numerator != denominator) {
                 child.style.backgroundColor = RED;
