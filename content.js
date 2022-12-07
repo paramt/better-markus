@@ -27,11 +27,11 @@ function highlight() {
         if(text.includes("earned/marks") || text.includes("span")) continue;
 
         if (/ *\d+\.\d+ *\/ *\d+\.\d+/.test(text)) {
-            let numerator = parseFloat(text.split('/')[0].trim());
+            let numerator = parseFloat(text.split('/')[0].trim().match(/\d+\.\d+/)[0]);
 			let denominator = parseFloat(text.split('/')[1].match(/\d+\.\d+/)[0]);
 
             if (numerator != denominator) {
-                child.style.backgroundColor = RED;
+				child.style.backgroundColor = RED;
             }
         }
     }
